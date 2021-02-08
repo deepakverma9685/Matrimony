@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="ShadiModel"
+            type="com.test.deepak.data.local.entity.ShadiModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/ivimage"
+            android:layout_width="match_parent"
+            android:layout_height="350dp" />
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{ShadiModel.fullname}"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{ShadiModel.dob}"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{ShadiModel.status}"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/layoutlikedislike"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:background="@null"
+                android:src="@drawable/ic_declined"
+                android:id="@+id/rejectBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:background="@null"
+                android:src="@drawable/ic_accept"
+                android:id="@+id/acceptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
